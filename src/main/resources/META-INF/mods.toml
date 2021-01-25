@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+[[mods]]
+modId="enchanting_convergence"
+version="1.0.0"
+displayName="Enchanting Convergence"
+authors="Meldexun"
+description='''
+TODO
+'''
