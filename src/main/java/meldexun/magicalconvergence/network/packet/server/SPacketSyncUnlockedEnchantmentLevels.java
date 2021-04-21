@@ -6,7 +6,7 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import meldexun.magicalconvergence.capability.enchantment.CapabilityUnlockedEnchantmentLevelsProvider;
 import meldexun.magicalconvergence.client.ClientEnchantingConvergence;
-import meldexun.magicalconvergence.network.packet.AbstractPacket;
+import meldexun.magicalconvergence.network.packet.IPacket;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;
@@ -14,7 +14,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.network.NetworkEvent.Context;
 
-public class SPacketSyncUnlockedEnchantmentLevels extends AbstractPacket {
+public class SPacketSyncUnlockedEnchantmentLevels implements IPacket {
 
 	private Object2IntMap<ResourceLocation> map = new Object2IntOpenHashMap<>();
 
