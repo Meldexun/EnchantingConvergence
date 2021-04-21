@@ -18,15 +18,15 @@ public class EnchantingConvergenceHelper {
 		if (stack.isEmpty()) {
 			return Collections.emptyList();
 		}
-		if (EnchantingConvergenceConfig.config.checkIfItemHasEnchantability.get() && stack.getItemEnchantability() <= 0 && stack.getItem() != Items.ENCHANTED_BOOK) {
+		if (EnchantingConvergenceConfig.SERVER_CONFIG.checkIfItemHasEnchantability.get() && stack.getItemEnchantability() <= 0 && stack.getItem() != Items.ENCHANTED_BOOK) {
 			return Collections.emptyList();
 		}
 		List<Enchantment> list = new ArrayList<>();
 		for (Enchantment enchantment : ForgeRegistries.ENCHANTMENTS.getValues()) {
-			if (EnchantingConvergenceConfig.config.checkIfEnchantmentIsTreasureEnchantment.get() && enchantment.isTreasureEnchantment()) {
+			if (EnchantingConvergenceConfig.SERVER_CONFIG.checkIfEnchantmentIsTreasureEnchantment.get() && enchantment.isTreasureEnchantment()) {
 				continue;
 			}
-			if (EnchantingConvergenceConfig.config.checkIfEnchantmentCanGenerateInLoot.get() && !enchantment.canGenerateInLoot()) {
+			if (EnchantingConvergenceConfig.SERVER_CONFIG.checkIfEnchantmentCanGenerateInLoot.get() && !enchantment.canGenerateInLoot()) {
 				continue;
 			}
 			if (!enchantment.canApplyAtEnchantingTable(stack) && ((stack.getItem() != Items.BOOK && stack.getItem() != Items.ENCHANTED_BOOK) || !enchantment.isAllowedOnBooks())) {
