@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[35,)"
-license="All rights reserved"
+license="GPL-3.0-or-later"
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 [[mods]]
 modId="enchanting_convergence"
